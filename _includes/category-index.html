@@ -1,9 +1,0 @@
-{% include index/header.html %}
-
-{% for post in site.posts %}
-    {% if post.categories contains include.category %}
-        {% include index/item.html %}
-    {% endif %}
-{% endfor %}
-
-{% include index/footer.html %}
