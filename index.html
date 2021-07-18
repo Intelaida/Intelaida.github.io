@@ -4,14 +4,14 @@
 		<!-- DEFINE $NAVLINKS_SHOW_DEFAULT = 1 -->
 	<!-- ENDIF -->
 <!-- ENDDEFINE -->
- INCLUDE overall_header.html 
+<!-- INCLUDE overall_header.html -->
 
- EVENT index_body_markforums_before 
- EVENT index_body_markforums_after 
+<!-- EVENT index_body_markforums_before -->
+<!-- EVENT index_body_markforums_after -->
 
- INCLUDE forumlist_body.html 
+<!-- INCLUDE forumlist_body.html -->
 
- EVENT index_body_forumlist_body_after
+<!-- EVENT index_body_forumlist_body_after -->
 
 <!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
 	<form method="post" action="{S_LOGIN_ACTION}" class="headerspace">
