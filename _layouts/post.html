@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Page last generated {{ site.time }} -->
+<html lang="ru">
+    <head>
+        {% include head.html %}
+        {% if page.math %}
+            <link rel="dns-prefetch" href="//cdn.mathjax.org">
+            <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
+        {% endif %}
+    </head>
+    <body>
+        {% include header.html %}
+
+        <div class="container" id="content">
+            <div class="well">
+                <h1 class="page-title"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h1>
+                <div class="header-left">
+                    {% assign post = page %}
+                    {% include post-header-text.html %}
+                </div>
+                <div class="header-right">
+                </div>
+                <div class="float-cleaner"></div>
+                <div class="post-header"></div>
+
+                {{ content }}
+
+                <hr/>
+
+                <div class="patreon-support">
+                    <a href="https://www.patreon.com/mkpankov" target="blank">
+                        {% img 'patreon-small.png' alt:'patreon' class:'patreon-support-img' %}
+                    </a>
+                    <a href="https://www.patreon.com/mkpankov" target="blank">
+                        Поддержите на Patreon
+                    </a>
+                </div>
+            </div>
+
+            <div id="comments">
+                {% include comments.html specific_url=page.comments_url %}
+            </div>
+
+            <hr/>
+        </div>
+        {% include content-loaded.html %}
+        {% include footer.html %}
+    </body>
+</html>
