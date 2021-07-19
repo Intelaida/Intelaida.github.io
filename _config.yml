@@ -5,12 +5,12 @@ email: rustycrate@michaelpankov.com
 description: > # это позволяет отключить переводы строк до начала "baseurl:"
   Неофициальный русскоязычный сайт о языке программирования Rust
 # Здесь переводы строк можно делать с помощью <br/>
-baseurl: "" # путь до сайта от корня, напр. /blog/. В нашем случае сайт прямо в корне
+baseurl: "/" # путь до сайта от корня, напр. /blog/. В нашем случае сайт прямо в корне
 set: "master"
 url: "https://rustycrate.ru" # базовое имя хоста и протокол
 # Эти параметры могут использоваться темой для Jekyll, чтобы поставить ссылки на профили
-twitter_username:
-github_username:  ruRust
+#twitter_username:
+#github_username:  ruRust
 
 # Настройки по умолчанию для определённых полей front matter
 defaults:
@@ -56,3 +56,10 @@ pagination:
   trail: 
     before: 2
     after: 2
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
